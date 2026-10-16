@@ -29,8 +29,7 @@ The data that openmods reads. Start from the `openmods.json` in this repository.
 | `summary` | yes | One sentence about the mod, at most 160 characters. Shown in mod lists and search engines. |
 | `games` | yes | A list of game slugs: the last part of the game page address on openmods, for example `"stardew-valley"` from `/games/stardew-valley`. |
 | `tags` | no | Up to 10 tags from this fixed list: `gameplay`, `quality-of-life`, `ui`, `graphics`, `audio`, `content`, `overhaul`, `fixes`, `cheats`, `translation`, `library`, `tools`. Other tags are skipped. |
-| `cover` | no | The path of an image in the repository, for example `"docs/cover.png"`. PNG, JPG, GIF or WebP, 16:9, for example 1280 x 720. Without a cover, openmods shows the game's art. |
-| `screenshots` | no | Up to 12 image paths in the repository. |
+| `cover` | no | The path of an image in the repository, for example `"docs/cover.png"`. PNG, JPG, GIF or WebP, 16:9, for example 1280 x 720. It is the mod's thumbnail in game lists, the header of the mod page and the image of share previews. Without a cover, openmods shows the game's art. |
 | `requires` | no | What players need first, for example `"SMAPI 4.0 or newer"`. Up to 20 entries. |
 | `gameVersions` | no | Game versions the mod works with, for example `"1.6"`. |
 | `links` | no | An object with `discord`, `website` and/or `support`. Each one is an `https://` address. |
@@ -46,7 +45,7 @@ The description for **players**, shown on the mod page. The README stays for dev
 - Use GitHub Markdown. Keep it under 100 KB.
 - Suggested sections: What it does, How to install, Compatibility, Screenshots, Known issues, Credits. See `openmods.md` in this repository.
 - Write for players: what the mod changes, and how to install it. Leave build steps and code details in the README.
-- Use images from the repository with relative paths, for example `![Screenshot](docs/screen1.png)`.
+- Put the screenshots here, not into `openmods.json`. Use images from the repository with relative paths, for example `![Screenshot](docs/screen1.png)`.
 - openmods removes scripts, styles and embedded frames. Plain Markdown works best.
 
 ## 4. Publish the downloads as GitHub releases
@@ -60,7 +59,7 @@ Players download from the **GitHub release page**; openmods links to the latest 
 - [ ] `openmods.json` is at the root, is valid JSON, and has `openmods`, `name`, `summary` and `games`.
 - [ ] Every value in `games` is a game slug from openmods.
 - [ ] Every tag is from the fixed list.
-- [ ] The `cover` and `screenshots` files exist at the given paths.
+- [ ] The `cover` file and the images in `openmods.md` exist at the given paths.
 - [ ] `openmods.md` is at the root and is under 100 KB.
 - [ ] (Recommended) A GitHub release with the mod files exists.
 
@@ -68,4 +67,4 @@ Players download from the **GitHub release page**; openmods links to the latest 
 
 A person signs in on openmods with GitHub, opens the game page, clicks "Add mod" and pastes the repository link. openmods checks everything above and shows a preview first.
 
-To change the listing later, change `openmods.json` or `openmods.md`. openmods refreshes its copy every few hours. To remove the mod from openmods, delete both files.
+To change the listing later, change `openmods.json` or `openmods.md`. openmods refreshes its copy regularly (every 10 minutes during the test phase). To remove the mod from openmods, delete both files.

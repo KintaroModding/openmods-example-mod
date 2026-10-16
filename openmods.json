@@ -6,7 +6,6 @@
   "games": ["stardew-valley"],
   "tags": ["tools"],
   "cover": "docs/cover.png",
-  "screenshots": ["docs/cover.png"],
   "requires": ["Nothing: this repository is an example, not a real mod."],
   "gameVersions": ["1.6"]
 }
