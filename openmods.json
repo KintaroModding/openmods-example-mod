@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openmods.openmods.workers.dev/openmods.schema.json",
+  "openmods": 1,
+  "name": "openmods Example Mod",
+  "summary": "An example repository that shows how to make a mod ready for openmods.",
+  "games": ["stardew-valley"],
+  "tags": ["tools"],
+  "cover": "docs/cover.png",
+  "screenshots": ["docs/cover.png"],
+  "requires": ["Nothing: this repository is an example, not a real mod."],
+  "gameVersions": ["1.6"]
+}
