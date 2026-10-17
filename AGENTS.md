@@ -28,7 +28,7 @@ The data that openmods reads. Start from the `openmods.json` in this repository.
 | `name` | yes | The name of the mod, at most 80 characters. |
 | `summary` | yes | One sentence about the mod, at most 160 characters. Shown in mod lists and search engines. |
 | `games` | yes | A list of game slugs: the last part of the game page address on openmods, for example `"stardew-valley"` from `/games/stardew-valley`. |
-| `tags` | no | Up to 10 tags from this fixed list: `gameplay`, `quality-of-life`, `ui`, `graphics`, `audio`, `content`, `overhaul`, `fixes`, `cheats`, `translation`, `library`, `tools`. Other tags are skipped. |
+| `tags` | yes | 1 to 5 tags from the fixed list in "Choose the tags" below. Tags work as categories: players filter the game's mod list by them. At least one tag must not be `adult`. Other tags are skipped. |
 | `cover` | no | The path of an image in the repository, for example `"docs/cover.png"`. PNG, JPG, GIF or WebP, 16:9, for example 1280 x 720. It is the mod's thumbnail in game lists, the header of the mod page and the image of share previews. Without a cover, openmods shows the game's art. |
 | `requires` | no | What players need first, for example `"SMAPI 4.0 or newer"`. Up to 20 entries. |
 | `gameVersions` | no | Game versions the mod works with, for example `"1.6"`. |
@@ -37,6 +37,23 @@ The data that openmods reads. Start from the `openmods.json` in this repository.
 Game slugs during the test phase: `baldurs-gate-3`, `cyberpunk-2077`, `elden-ring`, `fallout-4`, `minecraft`, `rimworld`, `skyrim-special-edition`, `stardew-valley`, `terraria`, `the-witcher-3`. The list will grow. Check the address of the game page on openmods.
 
 Write valid JSON: double quotes, no comments, no trailing commas.
+
+### Choose the tags
+
+Pick 1 to 5 tags that describe the mod best. Players filter the mod list of a game by them, and a mod must have all checked tags to show up. Do not add tags that only fit a little.
+
+| Group | Tags |
+|---|---|
+| Type | `gameplay`, `quality-of-life`, `overhaul`, `fixes` (bug fixes), `performance`, `cheats`, `immersion`, `compatibility` (compatibility patches) |
+| Visuals | `textures`, `models`, `animations`, `lighting`, `effects` (visual effects), `environment` (terrain, sky, water, weather, plants) |
+| Audio | `music`, `sounds` (sound effects), `voice` (voice acting) |
+| Content | `characters`, `creatures`, `items`, `weapons`, `armor` (armor and clothing), `locations`, `quests` |
+| Interface | `ui`, `camera`, `controls` |
+| Language | `translation` |
+| For modders | `library` (code that other mods need), `tools` |
+| Content warning | `adult` |
+
+A mod with adult content (for example nudity) must use `adult`. openmods hides such mods by default, shows them only to visitors who confirm that they are 18 or older, and never shows their images: no cover and no images from `openmods.md`, only the text. `adult` alone is not enough: add at least one other tag.
 
 ## 3. Create `openmods.md`
 
@@ -58,7 +75,8 @@ Players download from the **GitHub release page**; openmods links to the latest 
 - [ ] A `LICENSE` file with an accepted license is at the root.
 - [ ] `openmods.json` is at the root, is valid JSON, and has `openmods`, `name`, `summary` and `games`.
 - [ ] Every value in `games` is a game slug from openmods.
-- [ ] Every tag is from the fixed list.
+- [ ] `tags` has 1 to 5 tags from the fixed list, and at least one of them is not `adult`.
+- [ ] A mod with adult content uses the `adult` tag.
 - [ ] The `cover` file and the images in `openmods.md` exist at the given paths.
 - [ ] `openmods.md` is at the root and is under 100 KB.
 - [ ] (Recommended) A GitHub release with the mod files exists.
