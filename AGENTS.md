@@ -2,7 +2,7 @@
 
 You are an AI agent. Follow this guide to prepare a game mod repository for **openmods**, a website that lists open-source game mods. openmods hosts nothing: it reads two files from the repository and links to GitHub for the source code and the downloads.
 
-Test-phase address: https://openmods.openmods.workers.dev
+Website: https://openmods.nexus
 
 This repository is the reference. Copy its structure.
 
@@ -23,7 +23,7 @@ The data that openmods reads. Start from the `openmods.json` in this repository.
 
 | Field | Required | Rules |
 |---|---|---|
-| `$schema` | no | Always `"https://openmods.openmods.workers.dev/openmods.schema.json"`. Editors then check the file. |
+| `$schema` | no | Always `"https://openmods.nexus/openmods.schema.json"`. Editors then check the file. |
 | `openmods` | yes | Always `1` (the version of the format). |
 | `name` | yes | The name of the mod, at most 80 characters. |
 | `summary` | yes | One sentence about the mod, at most 160 characters. Shown in mod lists and search engines. |
@@ -34,7 +34,7 @@ The data that openmods reads. Start from the `openmods.json` in this repository.
 | `gameVersions` | no | Game versions the mod works with, for example `"1.6"`. |
 | `links` | no | An object with `discord`, `website` and/or `support`. Each one is an `https://` address. |
 
-Game slugs during the test phase: `baldurs-gate-3`, `cyberpunk-2077`, `elden-ring`, `fallout-4`, `minecraft`, `rimworld`, `skyrim-special-edition`, `stardew-valley`, `terraria`, `the-witcher-3`. The list will grow. Check the address of the game page on openmods.
+The game slug is the last part of the game page's address on openmods: for `https://openmods.nexus/games/baldurs-gate-3` it is `baldurs-gate-3`. Find the game with the search on https://openmods.nexus/games. If the game is missing, the user can ask for it on the openmods Discord server: https://discord.gg/8vtph8SCFe
 
 Write valid JSON: double quotes, no comments, no trailing commas.
 

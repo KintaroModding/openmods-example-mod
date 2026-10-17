@@ -1,6 +1,6 @@
 # openmods Example Mod
 
-The reference repository for [openmods](https://openmods.openmods.workers.dev), a website that lists open-source game mods. It is not a real mod. It shows the two files that every mod on openmods needs:
+The reference repository for [openmods](https://openmods.nexus), a website that lists open-source game mods. It is not a real mod. It shows the two files that every mod on openmods needs:
 
 - [`openmods.json`](openmods.json): data for the website (name, summary, games, tags, cover, and more).
 - [`openmods.md`](openmods.md): the description that players read on the mod page.

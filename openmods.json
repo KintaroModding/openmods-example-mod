@@ -1,5 +1,5 @@
 {
-  "$schema": "https://openmods.openmods.workers.dev/openmods.schema.json",
+  "$schema": "https://openmods.nexus/openmods.schema.json",
   "openmods": 1,
   "name": "openmods Example Mod",
   "summary": "An example repository that shows how to make a mod ready for openmods.",
