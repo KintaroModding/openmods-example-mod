@@ -57,11 +57,12 @@ A mod with adult content (for example nudity) must use `adult`. openmods hides s
 
 ## 3. Create `openmods.md`
 
-The description for **players**, shown on the mod page. The README stays for developers.
+The description for **players**, shown on the mod page. Deeper developer details, such as the code structure, stay in the README.
 
 - Use GitHub Markdown. Keep it under 100 KB.
-- Suggested sections: What it does, How to install, Compatibility, Screenshots, Known issues, Credits. See `openmods.md` in this repository.
-- Write for players: what the mod changes, and how to install it. Leave build steps and code details in the README.
+- Suggested sections, in this order: What it does, Screenshots, How to install, How to use, Compatibility, Known issues, How to build, Credits. See `openmods.md` in this repository. Leave out a section that does not fit the mod, for example How to use when the mod has no settings, keys or commands.
+- Write for players first: what the mod changes, and how to install, update and remove it.
+- **How to build** shows how anyone can build the release files from the source code, so players can check that the download matches the code, and anyone can continue the mod later. Write it from the repository's real build files, for example a `*.csproj`, `package.json`, `Makefile` or build script: name the tools and their versions, the build command, and where the built files end up. Never invent a command. If the mod has no code, write: "Nothing to build: the release contains the files of this repository." If you cannot tell how the mod is built, ask the user.
 - Put the screenshots here, not into `openmods.json`. Use images from the repository with relative paths, for example `![Screenshot](docs/screen1.png)`.
 - openmods removes scripts, styles and embedded frames. Plain Markdown works best.
 
@@ -79,6 +80,7 @@ Players download from the **GitHub release page**; openmods links to the latest 
 - [ ] A mod with adult content uses the `adult` tag.
 - [ ] The `cover` file and the images in `openmods.md` exist at the given paths.
 - [ ] `openmods.md` is at the root and is under 100 KB.
+- [ ] (Recommended) `openmods.md` has a How to build section that matches the repository's build files, or says "Nothing to build".
 - [ ] (Recommended) A GitHub release with the mod files exists.
 
 ## 6. List the mod
