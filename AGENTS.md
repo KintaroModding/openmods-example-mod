@@ -27,11 +27,11 @@ The data that openmods reads. Start from the `openmods.json` in this repository.
 | `openmods` | yes | Always `1` (the version of the format). |
 | `name` | yes | The name of the mod, at most 80 characters. |
 | `summary` | yes | One sentence about the mod, at most 160 characters. Shown in mod lists and search engines. |
-| `games` | yes | A list of game slugs: the last part of the game page address on openmods, for example `"stardew-valley"` from `/games/stardew-valley`. |
+| `games` | yes | A list of game slugs: the last part of the game page address on openmods, for example `"stardew-valley"` from `/games/stardew-valley`. No limit: a tool or framework can name every game it supports. The mod shows on a game page after the user adds it there once ("Add mod" on that game page). |
 | `tags` | yes | 1 to 5 tags from the fixed list in "Choose the tags" below. Tags work as categories: players filter the game's mod list by them. At least one tag must not be `adult`. Other tags are skipped. |
 | `cover` | no | The path of an image in the repository, for example `"docs/cover.png"`. PNG, JPG, GIF or WebP, 16:9, for example 1280 x 720. It is the mod's thumbnail in game lists, the header of the mod page and the image of share previews. Without a cover, openmods shows the game's art. |
 | `requires` | no | What players need first, for example `"SMAPI 4.0 or newer"`. Up to 20 entries. |
-| `gameVersions` | no | Game versions the mod works with, for example `"1.6"`. |
+| `gameVersions` | no | Game versions the mod works with. One list for all games, for example `["1.6"]`, or one list per game slug from `games`, for example `{ "stardew-valley": ["1.6"] }`. Up to 20 entries per list. |
 | `links` | no | An object with `discord`, `website` and/or `support`. Each one is an `https://` address. |
 
 The game slug is the last part of the game page's address on openmods: for `https://openmods.nexus/games/baldurs-gate-3` it is `baldurs-gate-3`. Find the game with the search on https://openmods.nexus/games. If the game is missing, the user can ask for it on the openmods Discord server: https://discord.gg/8vtph8SCFe
