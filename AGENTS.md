@@ -26,7 +26,7 @@ The data that openmods reads. Start from the `openmods.json` in this repository.
 | `$schema` | no | Always `"https://openmods.nexus/openmods.schema.json"`. Editors then check the file. |
 | `openmods` | yes | Always `1` (the version of the format). |
 | `name` | yes | The name of the mod, at most 80 characters. |
-| `summary` | yes | One sentence about the mod, at most 160 characters. Shown in mod lists and search engines. |
+| `summary` | yes | One sentence about the mod, at most 200 characters. Shown in mod lists and search engines. openmods cuts a longer one with "…". |
 | `games` | yes | A list of game slugs: the last part of the game page address on openmods, for example `"stardew-valley"` from `/games/stardew-valley`. No limit: a tool or framework can name every game it supports. The mod shows on a game page after the user adds it there once ("Add mod" on that game page). |
 | `tags` | yes | 1 to 5 tags from the fixed list in "Choose the tags" below. Tags work as categories: players filter the game's mod list by them. At least one tag must not be `adult`. Other tags are skipped. |
 | `cover` | no | The path of an image in the repository, for example `"docs/cover.webp"`. WebP is best, JPG is fine; PNG and GIF work too. 16:9, for example 1280 x 720, under about 500 KB. It is the mod's thumbnail in game lists, the header of the mod page and the image of share previews. Without a cover, openmods shows the game's art. |
@@ -98,6 +98,7 @@ The text of each GitHub release is the mod's **changelog**. Mod managers show it
 - [ ] The repository is public.
 - [ ] A `LICENSE` file with an accepted license is at the root.
 - [ ] `openmods.json` is at the root, is valid JSON, and has `openmods`, `name`, `summary` and `games`.
+- [ ] `summary` has at most 200 characters.
 - [ ] Every value in `games` is a game slug from openmods.
 - [ ] `tags` has 1 to 5 tags from the fixed list, and at least one of them is not `adult`.
 - [ ] A mod with adult content uses the `adult` tag.
