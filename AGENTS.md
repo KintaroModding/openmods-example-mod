@@ -63,7 +63,7 @@ The description for **players**, shown on the mod page. Deeper developer details
 - Suggested sections, in this order: What it does, Screenshots, How to install, How to use, Compatibility, Known issues, How to build, Credits. See `openmods.md` in this repository. Leave out a section that does not fit the mod, for example How to use when the mod has no settings, keys or commands.
 - Write for players first: what the mod changes, and how to install, update and remove it.
 - **How to build** shows how anyone can build the release files from the source code, so players can check that the download matches the code, and anyone can continue the mod later. Write it from the repository's real build files, for example a `*.csproj`, `package.json`, `Makefile` or build script: name the tools and their versions, the build command, and where the built files end up. Never invent a command. If the mod has no code, write: "Nothing to build: the release contains the files of this repository." If you cannot tell how the mod is built, ask the user.
-- Put the screenshots here, not into `openmods.json`. Use images from the repository with relative paths, for example `![Screenshot](docs/screen1.png)`.
+- Put the screenshots here, not into `openmods.json`. Use images from the repository with relative paths, for example `![Screenshot](docs/screen1.png)`, or pictures on another site, for example Imgur, with their full `https://` address. Use the direct address of the picture file (it usually ends in `.png`, `.jpg` or `.gif`), not the address of the page that shows it.
 - openmods removes scripts, styles and embedded frames. Plain Markdown works best.
 
 ## 4. Publish the downloads as GitHub releases

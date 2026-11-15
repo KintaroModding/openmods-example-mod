@@ -15,6 +15,8 @@ Show the mod in the game. Put the pictures into the repository, for example into
 
 ![The cover image of the example mod](docs/cover.png)
 
+A picture on another site, for example Imgur, works too. Use its direct `https://` address, the one that ends in `.png`, `.jpg` or `.gif`.
+
 ## How to install
 
 1. Install the mod loader of the game, if the mod needs one.
