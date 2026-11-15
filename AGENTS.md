@@ -87,4 +87,4 @@ Players download from the **GitHub release page**; openmods links to the latest 
 
 A person signs in on openmods with GitHub, opens the game page, clicks "Add mod" and pastes the repository link. openmods checks everything above and shows a preview first.
 
-To change the listing later, change `openmods.json` or `openmods.md`. openmods refreshes its copy regularly (every 10 minutes during the test phase). To remove the mod from openmods, delete both files.
+To change the listing later, change `openmods.json` or `openmods.md`. openmods refreshes its copy regularly, usually within half an hour. To remove the mod from openmods, delete both files.
