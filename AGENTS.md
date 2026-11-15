@@ -70,6 +70,28 @@ The description for **players**, shown on the mod page. Deeper developer details
 
 Players download from the **GitHub release page**; openmods links to the latest release. Create a release with a version tag (for example `v1.0.0`) and attach the mod files. A repository without a release can still be listed: openmods then shows "No release yet" and links to the source code.
 
+### Write the release notes
+
+The text of each GitHub release is the mod's **changelog**. Mod managers show it to players, for example before an update.
+
+- Write it for players: what changed in this version. Do not repeat how to install; that is in `openmods.md`.
+- Use the same form in every release. Leave out a heading that has nothing under it:
+
+  ```markdown
+  ## Added
+  - A new option to hide the outlines in combat.
+
+  ## Changed
+  - The outlines are thinner.
+
+  ## Fixed
+  - The map no longer flickers after loading a save.
+  ```
+
+- One change per line, in short sentences.
+- The first release can say "First release." and list what the mod does.
+- The tag is the version, for example `v1.2.0`. Use a new tag for every release.
+
 ## 5. Check before you finish
 
 - [ ] The repository is public.
@@ -82,6 +104,7 @@ Players download from the **GitHub release page**; openmods links to the latest 
 - [ ] `openmods.md` is at the root and is under 100 KB.
 - [ ] (Recommended) `openmods.md` has a How to build section that matches the repository's build files, or says "Nothing to build".
 - [ ] (Recommended) A GitHub release with the mod files exists.
+- [ ] (Recommended) Its release notes say what changed, under `## Added`, `## Changed` and `## Fixed`.
 
 ## 6. List the mod
 
