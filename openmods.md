@@ -13,9 +13,11 @@ Tell players in a few sentences what your mod changes in the game. Start with th
 
 Show the mod in the game. Put the pictures into the repository, for example into `docs/`, and link them with a relative path:
 
-![The cover image of the example mod](docs/cover.png)
+![The cover image of the example mod](docs/cover.webp)
 
-A picture on another site, for example Imgur, works too. Use its direct `https://` address, the one that ends in `.png`, `.jpg` or `.gif`.
+A picture on another site, for example Imgur, works too. Use its direct `https://` address, the one that ends in `.webp`, `.jpg`, `.png` or `.gif`.
+
+Keep the pictures small: WebP or JPG, at most 1920 x 1080, under about 500 KB each. Mod managers download every picture in full, even for a small preview. This cover is 20 KB as WebP; as PNG it was 428 KB.
 
 ## How to install
 

@@ -5,7 +5,7 @@
   "summary": "An example repository that shows how to make a mod ready for openmods.",
   "games": ["stardew-valley"],
   "tags": ["tools"],
-  "cover": "docs/cover.png",
+  "cover": "docs/cover.webp",
   "requires": ["Nothing: this repository is an example, not a real mod."],
   "gameVersions": ["1.6"]
 }

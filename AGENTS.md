@@ -29,7 +29,7 @@ The data that openmods reads. Start from the `openmods.json` in this repository.
 | `summary` | yes | One sentence about the mod, at most 160 characters. Shown in mod lists and search engines. |
 | `games` | yes | A list of game slugs: the last part of the game page address on openmods, for example `"stardew-valley"` from `/games/stardew-valley`. No limit: a tool or framework can name every game it supports. The mod shows on a game page after the user adds it there once ("Add mod" on that game page). |
 | `tags` | yes | 1 to 5 tags from the fixed list in "Choose the tags" below. Tags work as categories: players filter the game's mod list by them. At least one tag must not be `adult`. Other tags are skipped. |
-| `cover` | no | The path of an image in the repository, for example `"docs/cover.png"`. PNG, JPG, GIF or WebP, 16:9, for example 1280 x 720. It is the mod's thumbnail in game lists, the header of the mod page and the image of share previews. Without a cover, openmods shows the game's art. |
+| `cover` | no | The path of an image in the repository, for example `"docs/cover.webp"`. WebP is best, JPG is fine; PNG and GIF work too. 16:9, for example 1280 x 720, under about 500 KB. It is the mod's thumbnail in game lists, the header of the mod page and the image of share previews. Without a cover, openmods shows the game's art. |
 | `requires` | no | What players need first, for example `"SMAPI 4.0 or newer"`. Up to 20 entries. |
 | `gameVersions` | no | Game versions the mod works with. One list for all games, for example `["1.6"]`, or one list per game slug from `games`, for example `{ "stardew-valley": ["1.6"] }`. Up to 20 entries per list. |
 | `links` | no | An object with `discord`, `website` and/or `support`. Each one is an `https://` address. |
@@ -63,7 +63,8 @@ The description for **players**, shown on the mod page. Deeper developer details
 - Suggested sections, in this order: What it does, Screenshots, How to install, How to use, Compatibility, Known issues, How to build, Credits. See `openmods.md` in this repository. Leave out a section that does not fit the mod, for example How to use when the mod has no settings, keys or commands.
 - Write for players first: what the mod changes, and how to install, update and remove it.
 - **How to build** shows how anyone can build the release files from the source code, so players can check that the download matches the code, and anyone can continue the mod later. Write it from the repository's real build files, for example a `*.csproj`, `package.json`, `Makefile` or build script: name the tools and their versions, the build command, and where the built files end up. Never invent a command. If the mod has no code, write: "Nothing to build: the release contains the files of this repository." If you cannot tell how the mod is built, ask the user.
-- Put the screenshots here, not into `openmods.json`. Use images from the repository with relative paths, for example `![Screenshot](docs/screen1.png)`, or pictures on another site, for example Imgur, with their full `https://` address. Use the direct address of the picture file (it usually ends in `.png`, `.jpg` or `.gif`), not the address of the page that shows it.
+- Put the screenshots here, not into `openmods.json`. Use images from the repository with relative paths, for example `![Screenshot](docs/screen1.webp)`, or pictures on another site, for example Imgur, with their full `https://` address. Use the direct address of the picture file (it usually ends in `.webp`, `.jpg`, `.png` or `.gif`), not the address of the page that shows it.
+- Keep every picture small: WebP or JPG, at most 1920 x 1080, under about 500 KB. Mod managers download each picture in full, even for a small preview, and a 3 MB PNG screenshot is often under 400 KB as WebP. Convert PNG screenshots before you add them.
 - openmods removes scripts, styles and embedded frames. Plain Markdown works best.
 
 ## 4. Publish the downloads as GitHub releases
@@ -103,6 +104,7 @@ The text of each GitHub release is the mod's **changelog**. Mod managers show it
 - [ ] The `cover` file and the images in `openmods.md` exist at the given paths.
 - [ ] `openmods.md` is at the root and is under 100 KB.
 - [ ] (Recommended) `openmods.md` has a How to build section that matches the repository's build files, or says "Nothing to build".
+- [ ] (Recommended) The cover and the screenshots are WebP or JPG, at most 1920 x 1080 and under about 500 KB each.
 - [ ] (Recommended) A GitHub release with the mod files exists.
 - [ ] (Recommended) Its release notes say what changed, under `## Added`, `## Changed` and `## Fixed`.
 
